@@ -16,7 +16,7 @@ public class Main {
         System.out.println("How many walls are there in the room?");
         int numWalls = reading.nextInt();
         int totalArea = 0;
-        double height, width
+        double height, width;
 
         for(int i=0; i<numWalls; i++){
             System.out.println("Height of wall " + (i+1) + "(m):");
