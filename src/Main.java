@@ -12,16 +12,30 @@ public class Main {
     }
 
     private void start(){
-        System.out.println("Total surface area of all the walls (in m^2): ");
         Scanner reading = new Scanner(System.in);
-        double totalArea = reading.nextDouble();
-        System.out.println("Total surface area of the ceiling (in m^2): ");
-        totalArea += reading.nextDouble();
-        System.out.println("Total surface area which windows occupy on the walls and ceiling (in m^2): ");
-        totalArea -= reading.nextDouble();
-        System.out.println("How many coats of paint?: ");
-        totalArea *= reading.nextDouble();
-        System.out.println(totalArea*METERS_PER_LITRE + " Litres of paint required");
+        System.out.println("How many walls are there in the room?");
+        int numWalls = reading.nextInt();
+        int totalArea = 0;
+        double height, width
+
+        for(int i=0; i<numWalls; i++){
+            System.out.println("Height of wall " + (i+1) + "(m):");
+            height = reading.nextDouble();
+            System.out.println("Width of wall " + (i+1) + "(m):");
+            width = reading.nextDouble();
+            totalArea += height*width;
+        }
+
+        System.out.println("Width of ceiling (m):");
+        width = reading.nextDouble();
+        System.out.println("Length of ceiling (m):");
+        height = reading.nextDouble();
+        totalArea += width*height;
+
+        System.out.println("Number of coats of paint:");
+        totalArea *= reading.nextInt();
+        System.out.println(totalArea/METERS_PER_LITRE + " Litres of paint required");
+
     }
 
 }
